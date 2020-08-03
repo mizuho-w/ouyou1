@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Editing Book</h1>
+
+<% if flash[:notice] %>
+ <div class="flash"><%= flash[:notice] %></div>
+ <% end %>
+
+<form>
+  <%= render 'form', book: @book %>
+</form>
+
+<%= link_to 'Show', book_path(@book.id) %> |
+<%= link_to 'Back', books_path %>
